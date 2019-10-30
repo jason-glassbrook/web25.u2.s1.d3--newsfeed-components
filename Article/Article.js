@@ -179,7 +179,7 @@ const buildArticle = function (data) {
   article.upClass ("article");
   title.upClass ("title");
   date.upClass ("date");
-  button.upClass ("expand" , "button");
+  button.upClass ("toggle" , "button");
 
   /// add content ///
   title.innerHTML = data.title;
@@ -198,7 +198,7 @@ const buildArticle = function (data) {
   const toggleArticle = function (ev) {
     article.toggleClass ("open");
     
-    /// change button on state ///
+    /// change button text on state ///
     console.log (article.hasClass ("open"));
     if (article.hasClass ("open")) {
       button.innerHTML = "COLLAPSE";
