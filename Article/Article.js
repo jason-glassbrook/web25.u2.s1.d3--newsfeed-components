@@ -113,6 +113,10 @@ const repeat = (n , fn) => (Array.from (Array (n) , fn));
 const newElem =
   (tag) => (document.createElement (tag));
 
+Element.prototype.hasClass = function (...args) {
+  return (this.classList.contains (...args));
+};
+
 Element.prototype.upClass = function (...args) {
   this.classList.add (...args);
 };
@@ -193,6 +197,14 @@ const buildArticle = function (data) {
   /// add events ///
   const toggleArticle = function (ev) {
     article.toggleClass ("open");
+    
+    /// change button on state ///
+    console.log (article.hasClass ("open"));
+    if (article.hasClass ("open")) {
+      button.innerHTML = "COLLAPSE";
+    } else {
+      button.innerHTML = "EXPAND"
+    }
   };
   button.addEventListener ("click" , toggleArticle);
 
