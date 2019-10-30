@@ -1,3 +1,7 @@
+/***********************************************************
+  DATA
+***********************************************************/
+
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
@@ -9,8 +13,52 @@ let menuItems = [
   'Log Out'
 ];
 
-/* 
+/***********************************************************
+  COMPONENT BUILDER
+***********************************************************/
 
+/***************************************
+  utility functions
+***************************************/
+
+/*******************
+  Arrays
+*******************/
+
+const repeat = (n , fn) => (Array.from (Array (n) , fn));
+
+/*******************
+  HTML Elements
+*******************/
+
+const newElem =
+  (tag) => (document.createElement (tag));
+
+Element.prototype.hasClass = function (...args) {
+  return (this.classList.contains (...args));
+};
+
+Element.prototype.upClass = function (...args) {
+  this.classList.add (...args);
+};
+
+Element.prototype.dnClass = function (...args) {
+  this.classList.remove (...args);
+};
+
+Element.prototype.toggleClass = function (...args) {
+  this.classList.toggle (...args);
+};
+
+Element.prototype.swapClass = function (...args) {
+  this.classList.replace (...args);
+};
+
+/***************************************
+  main
+***************************************/
+
+/* 
   Step 1: Write a function that will create a menu component as seen below:
 
   <div class="menu">
@@ -33,3 +81,11 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+
+
+/***********************************************************
+  BUILD
+***********************************************************/
+
+
