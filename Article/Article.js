@@ -149,7 +149,7 @@ const buildArticle = function (data) {
   article.upClass ("article");
   title.upClass ("title");
   date.upClass ("date");
-  button.upClass ("button" , "toggle-button");
+  button.upClass ("button toggle-button");
   buttonIcon.upClass (Icons["toggle-down"]);
 
   /// add content ///
