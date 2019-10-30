@@ -167,10 +167,10 @@ const buildArticle = function (data) {
   const button = newElem ("span");
 
   // add classes
-  article.addClass ("article");
-  title.addClass ("title");
-  data.addClass ("date");
-  button.addClass ("expand" , "button");
+  article.upClass ("article");
+  title.upClass ("title");
+  date.upClass ("date");
+  button.upClass ("expand" , "button");
 
   // exit
   return (article);
