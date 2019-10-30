@@ -48,6 +48,8 @@ const buildMenu = function (data) {
   const items = repeat (data.length , () => (newElem ("li")));
 
   /// add structure ///
+  menu.append (list);
+  list.append (...items);
 
   /// add classes ///
 
