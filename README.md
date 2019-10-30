@@ -47,7 +47,7 @@ In this project we are going to be building a news feed reader. The goal is to h
 ## Part 3: The Menu
 
 *   [x] Import `Menu.less` from the correct path into index.less (follow the example for `Header.less` if you’re not sure how to write the correct path)
-*   [ ] Follow the instructions found in the Menu.js file to complete the JavaScript functionality.
+*   [x] Follow the instructions found in the Menu.js file to complete the JavaScript functionality.
 
 ## Stretch Goals
 
