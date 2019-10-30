@@ -190,6 +190,12 @@ const buildArticle = function (data) {
   // );
   button.innerHTML = "EXPAND";
 
+  /// add events ///
+  const toggleArticle = function (ev) {
+    article.toggleClass ("open");
+  };
+  button.addEventListener ("click" , toggleArticle);
+
   // exit
   return (article);
 };
