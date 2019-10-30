@@ -79,16 +79,23 @@ const data = [
     date: `Jan 1st, 2019`,
     firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
         hodor. Hodor, hodor. Hodor. Hodor, hodor - hodor... Hodor hodor hodor; hodor HODOR hodor, hodor hodor?! Hodor hodor, hodor.
-        Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor? `,
+        Hodor hodor hodor hodor hodor! Hodor hodor - HODOR hodor, hodor hodor hodor hodor hodor; hodor hodor?`,
 
     secondParagraph: `Hodor, hodor. Hodor. Hodor, hodor, hodor. Hodor hodor, hodor. Hodor hodor, hodor, hodor hodor. Hodor! Hodor hodor, hodor;
         hodor hodor hodor? Hodor, hodor. Hodor. Hodor, hodor - HODOR hodor, hodor hodor hodor! Hodor, hodor. Hodor. Hodor, HODOR
         hodor, hodor hodor, hodor, hodor hodor. Hodor hodor - hodor - hodor... Hodor hodor hodor hodor hodor hodor hodor?! Hodor
-        hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor? `,
+        hodor - hodor hodor hodor. Hodor. Hodor hodor... Hodor hodor hodor hodor hodor?`,
 
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
         Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
         Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: `Lorem Ipsum`,
+    date: `Jan 1st, 1901`,
+    firstParagraph: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos assumenda ab unde odit perferendis porro cumque, repudiandae iste pariatur dolore hic. Voluptatem, esse! Nisi ipsa, eaque aperiam deleniti laudantium cupiditate.`,
+    secondParagraph: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est cupiditate adipisci perspiciatis fuga harum officia obcaecati magnam, nam beatae, praesentium id odit dolorum vel? Quam voluptate iure nostrum molestiae adipisci?`,
+    thirdParagraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quod mollitia numquam illo error, qui debitis sequi velit laudantium quis ullam totam earum veritatis nulla, vitae non expedita eaque minima?`
   }
 ];
 
