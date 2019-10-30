@@ -129,4 +129,10 @@ const buildArticle = function (data) {
   BUILD
 ***********************************************************/
 
+const container = document.querySelector ("div.articles");
 
+const articles = data.map (
+  (el) => (buildArticle (el))
+);
+
+container.append (...articles);
