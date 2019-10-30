@@ -137,17 +137,20 @@ const buildArticle = function (data) {
   const date = newElem ("p");
   const paragraphs = repeat (3 , () => (newElem ("p")));
   const button = newElem ("span");
+  const buttonIcon = newElem ("i");
 
   /// add structure ///
   article.append (
     title , date , ...paragraphs , button
   );
+  button.append (buttonIcon);
 
   /// add classes ///
   article.upClass ("article");
   title.upClass ("title");
   date.upClass ("date");
   button.upClass ("button" , "toggle-button");
+  buttonIcon.upClass (Icons["toggle-down"]);
 
   /// add content ///
   title.innerHTML = data.title;
@@ -160,7 +163,7 @@ const buildArticle = function (data) {
       el.innerHTML = data.paragraphs[i];
     }
   );
-  button.innerHTML = "EXPAND";
+  // button.innerHTML = Icons["toggle-down"];
 
   /// add events ///
   const toggleArticle = function (ev) {
@@ -169,9 +172,9 @@ const buildArticle = function (data) {
     /// change button text on state ///
     console.log (article.hasClass ("open"));
     if (article.hasClass ("open")) {
-      button.innerHTML = "COLLAPSE";
+      buttonIcon.swapClass (Icons["toggle-down"] , Icons["toggle-up"]);
     } else {
-      button.innerHTML = "EXPAND"
+      buttonIcon.swapClass (Icons["toggle-up"] , Icons["toggle-down"]);
     }
   };
   button.addEventListener ("click" , toggleArticle);
