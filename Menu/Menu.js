@@ -55,6 +55,11 @@ const buildMenu = function (data) {
   menu.upClass ("menu");
 
   /// add content ///
+  items.forEach (
+    (el , i) => {
+      el.innerHTML = data[i];
+    }
+  );
 
   /// add events ///
 
