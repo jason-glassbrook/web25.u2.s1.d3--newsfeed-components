@@ -188,6 +188,7 @@ const buildArticle = function (data) {
   //     el.innerHTML = data.paragraphs[i];
   //   }
   // );
+  button.innerHTML = "EXPAND";
 
   // exit
   return (article);
