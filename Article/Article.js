@@ -153,7 +153,7 @@ const buildArticle = function (data) {
   paragraphs[0].innerHTML = data.firstParagraph;
   paragraphs[1].innerHTML = data.secondParagraph;
   paragraphs[2].innerHTML = data.thirdParagraph;
-  // paragraphs.map (
+  // paragraphs.forEach (
   //   (el , i) => {
   //     el.innerHTML = data.paragraphs[i];
   //   }
