@@ -170,7 +170,7 @@ const buildArticle = function (data) {
   article.addClass ("article");
   title.addClass ("title");
   data.addClass ("date");
-  button.addClass ("button" , "expand");
+  button.addClass ("expand" , "button");
 
   // exit
   return (article);
