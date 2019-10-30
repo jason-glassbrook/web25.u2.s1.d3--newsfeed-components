@@ -41,13 +41,33 @@ let menuItems = [
   
 */
 
+const buildMenu = function (data) {
+  /// create elements ///
+  const menu = newElem ("div");
+  const list = newElem ("ul");
+  const items = repeat (data.length , () => (newElem ("li")));
 
+  /// add structure ///
+
+  /// add classes ///
+
+  /// add content ///
+
+  /// add events ///
+
+  // exit
+  return (menu);
+};
 
 /***********************************************************
   BUILD
 ***********************************************************/
 
-const menuContainer = document.querySelector ("header");
+const menuContainer = document.querySelector ("div.header");
+// -- WTH
+// We aren't using <header>?
+// We're doing <div class="header">.
+// Way to be semantic...
 
 const menu = buildMenu (menuItems);
 

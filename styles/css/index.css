@@ -63,7 +63,7 @@
   top: 10px;
   right: 10px;
 }
-.article .toggle.button {
+.article .button.toggle-button {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -76,7 +76,7 @@
 .article.open {
   height: 400px;
 }
-.menu.button {
+.button.menu-button {
   position: absolute;
   left: 20px;
   cursor: pointer;

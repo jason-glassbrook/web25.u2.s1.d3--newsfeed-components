@@ -145,7 +145,7 @@ const buildArticle = function (data) {
   article.upClass ("article");
   title.upClass ("title");
   date.upClass ("date");
-  button.upClass ("toggle" , "button");
+  button.upClass ("button" , "toggle-button");
 
   /// add content ///
   title.innerHTML = data.title;
