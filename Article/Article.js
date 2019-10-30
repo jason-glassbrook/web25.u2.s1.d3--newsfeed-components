@@ -167,6 +167,9 @@ const buildArticle = function (data) {
   const button = newElem ("span");
 
   /// add structure ///
+  article.append (
+    title , date , ...paragraphs , button
+  );
 
   /// add classes ///
   article.upClass ("article");
