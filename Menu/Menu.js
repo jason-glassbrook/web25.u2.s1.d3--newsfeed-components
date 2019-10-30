@@ -52,6 +52,7 @@ const buildMenu = function (data) {
   list.append (...items);
 
   /// add classes ///
+  menu.upClass ("menu");
 
   /// add content ///
 
