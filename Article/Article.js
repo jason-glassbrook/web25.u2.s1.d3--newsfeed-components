@@ -129,7 +129,7 @@ const data = [
   Arrays
 *******************/
 
-const repeat = (n , fn) => (Array (n) .map (fn));
+const repeat = (n , fn) => (Array.from (Array (n) , fn));
 
 /*******************
   HTML Elements
@@ -171,6 +171,18 @@ const buildArticle = function (data) {
   title.upClass ("title");
   date.upClass ("date");
   button.upClass ("expand" , "button");
+
+  // add content
+  title.innerHTML = data.title;
+  date.innerHTML = data.date;
+  paragraphs[0].innerHTML = data.firstParagraph;
+  paragraphs[1].innerHTML = data.secondParagraph;
+  paragraphs[2].innerHTML = data.thirdParagraph;
+  // paragraphs.map (
+  //   (el , i) => {
+  //     el.innerHTML = data.paragraphs[i];
+  //   }
+  // );
 
   // exit
   return (article);
