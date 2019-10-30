@@ -159,20 +159,22 @@ Element.prototype.swapClass = function (...args) {
 ***************************************/
 
 const buildArticle = function (data) {
-  // create elements
+  /// create elements ///
   const article = newElem ("div");
   const title = newElem ("h2");
   const date = newElem ("p");
   const paragraphs = repeat (3 , () => (newElem ("p")));
   const button = newElem ("span");
 
-  // add classes
+  /// add structure ///
+
+  /// add classes ///
   article.upClass ("article");
   title.upClass ("title");
   date.upClass ("date");
   button.upClass ("expand" , "button");
 
-  // add content
+  /// add content ///
   title.innerHTML = data.title;
   date.innerHTML = data.date;
   paragraphs[0].innerHTML = data.firstParagraph;
