@@ -121,8 +121,53 @@ const data = [
 
 */
 
-const buildArticle = function (data) {
+/***************************************
+  utility functions
+***************************************/
 
+/*******************
+  Arrays
+*******************/
+
+const repeat = (n , fn) => (Array (n) .map (fn));
+
+/*******************
+  HTML Elements
+*******************/
+
+const newElem =
+  (tag) => (document.createElement (tag));
+
+Element.prototype.upClass = function (...args) {
+  this.classList.add (...args);
+};
+
+Element.prototype.dnClass = function (...args) {
+  this.classList.remove (...args);
+};
+
+Element.prototype.toggleClass = function (...args) {
+  this.classList.toggle (...args);
+};
+
+Element.prototype.swapClass = function (...args) {
+  this.classList.replace (...args);
+};
+
+/***************************************
+  main
+***************************************/
+
+const buildArticle = function (data) {
+  // create elements
+  const article = newElem ("div");
+  const title = newElem ("h2");
+  const date = newElem ("p");
+  const paragraphs = repeat (3 , () => (newElem ("p")));
+  const button = newElem ("span");
+
+  // exit
+  return (article);
 };
 
 /***********************************************************
