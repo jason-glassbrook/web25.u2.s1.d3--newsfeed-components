@@ -103,59 +103,6 @@ const data = [
   COMPONENT BUILDER
 ***********************************************************/
 
-/***************************************
-  utility functions
-***************************************/
-
-/*******************
-  Arrays
-*******************/
-
-const repeat = (n , fn) => (Array.from (Array (n) , fn));
-
-/*******************
-  HTML Elements
-*******************/
-
-const newElem =
-  (tag) => (document.createElement (tag));
-
-Element.prototype.hasClass = function (...args) {
-  return (this.classList.contains (...args));
-};
-
-Element.prototype.upClass = function (...args) {
-  // modify
-  this.classList.add (...args);
-  // return new class list
-  return (this.classList);
-};
-
-Element.prototype.dnClass = function (...args) {
-  // modify
-  this.classList.remove (...args);
-  // return new class list
-  return (this.classList);
-};
-
-Element.prototype.toggleClass = function (...args) {
-  // modify
-  this.classList.toggle (...args);
-  // return new class list
-  return (this.classList);
-};
-
-Element.prototype.swapClass = function (...args) {
-  // modify
-  this.classList.replace (...args);
-  // return new class list
-  return (this.classList);
-};
-
-/***************************************
-  main
-***************************************/
-
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
