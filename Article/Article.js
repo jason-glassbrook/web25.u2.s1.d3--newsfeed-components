@@ -166,6 +166,12 @@ const buildArticle = function (data) {
   const paragraphs = repeat (3 , () => (newElem ("p")));
   const button = newElem ("span");
 
+  // add classes
+  article.addClass ("article");
+  title.addClass ("title");
+  data.addClass ("date");
+  button.addClass ("button" , "expand");
+
   // exit
   return (article);
 };
