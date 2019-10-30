@@ -41,7 +41,7 @@ let menuItems = [
   
 */
 
-const buildMenu = function (data) {
+const buildMenu = function (button , data) {
   /// create elements ///
   const menu = newElem ("div");
   const list = newElem ("ul");
@@ -62,6 +62,10 @@ const buildMenu = function (data) {
   );
 
   /// add events ///
+  const toggleMenu = function (ev) {
+    menu.toggleClass ("open");
+  };
+  button.addEventListener ("click" , toggleMenu);
 
   // exit
   return (menu);
@@ -76,7 +80,8 @@ const menuContainer = document.querySelector ("div.header");
 // We aren't using <header>?
 // We're doing <div class="header">.
 // Way to be semantic...
+const menuButton = menuContainer.querySelector (".button.menu-button");
 
-const menu = buildMenu (menuItems);
+const menu = buildMenu (menuButton , menuItems);
 
 menuContainer.append (menu);
