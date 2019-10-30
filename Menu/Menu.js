@@ -47,4 +47,8 @@ let menuItems = [
   BUILD
 ***********************************************************/
 
+const menuContainer = document.querySelector ("header");
 
+const menu = buildMenu (menuItems);
+
+menuContainer.append (menu);
