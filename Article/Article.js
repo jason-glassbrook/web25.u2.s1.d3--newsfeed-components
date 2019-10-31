@@ -170,7 +170,6 @@ const buildArticle = function (data) {
     article.toggleClass ("open");
     
     /// change button icon on state ///
-    console.log (article.hasClass ("open"));
     if (article.hasClass ("open")) {
       buttonIcon.swapClass (Icons["toggle-down"] , Icons["toggle-up"]);
     } else {

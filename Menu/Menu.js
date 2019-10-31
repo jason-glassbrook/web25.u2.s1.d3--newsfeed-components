@@ -69,7 +69,6 @@ const buildMenu = function (button , data) {
     menu.toggleClass ("open");
     
     /// change button icon on state ///
-    console.log (menu.hasClass ("open"));
     if (menu.hasClass ("open")) {
       buttonIcon.swapClass (Icons["show-menu"] , Icons["hide-menu"]);
     } else {
