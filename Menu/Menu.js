@@ -47,6 +47,9 @@ const buildMenu = function (button , data) {
   const list = newElem ("ul");
   const items = repeat (data.length , () => (newElem ("li")));
 
+  /// get existing elements
+  const buttonIcon = button.querySelector ("i");
+
   /// add structure ///
   menu.append (list);
   list.append (...items);
@@ -64,6 +67,14 @@ const buildMenu = function (button , data) {
   /// add events ///
   const toggleMenu = function (ev) {
     menu.toggleClass ("open");
+    
+    /// change button icon on state ///
+    console.log (menu.hasClass ("open"));
+    if (menu.hasClass ("open")) {
+      buttonIcon.swapClass (Icons["show-menu"] , Icons["hide-menu"]);
+    } else {
+      buttonIcon.swapClass (Icons["hide-menu"] , Icons["show-menu"]);
+    }
   };
   button.addEventListener ("click" , toggleMenu);
 
