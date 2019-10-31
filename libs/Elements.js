@@ -27,9 +27,15 @@ const splitClassStrings = (classStrings) => {
   - accepts whitespace-separated class strings
 --------------------------------------*/
 Element.prototype.hasClass = function (...args) {
-
+  const r = splitClassStrings(args)
+    .map (
+      (el) => (this.classList.contains (el))
+    )
+    .every (
+      (el) => (el)
+    );
   /// return ///
-  return (this.classList.contains (...args));
+  return (r);
 };
 
 /*--------------------------------------
