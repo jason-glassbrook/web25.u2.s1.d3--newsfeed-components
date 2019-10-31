@@ -56,6 +56,10 @@ const buildMenu = function (button , data) {
 
   /// add classes ///
   menu.upClass ("menu");
+  { // replace button icon class in case it's missing or wrong
+    const oldClass = Array.from (buttonIcon.classList).join (" ");
+    buttonIcon.swapClass (oldClass , Icons["show-menu"]);
+  }
 
   /// add content ///
   items.forEach (
