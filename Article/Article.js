@@ -169,7 +169,7 @@ const buildArticle = function (data) {
   const toggleArticle = function (ev) {
     article.toggleClass ("open");
     
-    /// change button text on state ///
+    /// change button icon on state ///
     console.log (article.hasClass ("open"));
     if (article.hasClass ("open")) {
       buttonIcon.swapClass (Icons["toggle-down"] , Icons["toggle-up"]);
