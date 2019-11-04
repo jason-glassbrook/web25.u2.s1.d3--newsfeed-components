@@ -1,3 +1,7 @@
+/***********************************************************
+  DATA
+***********************************************************/
+
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
@@ -9,8 +13,11 @@ let menuItems = [
   'Log Out'
 ];
 
-/* 
+/***********************************************************
+  COMPONENT BUILDER
+***********************************************************/
 
+/* 
   Step 1: Write a function that will create a menu component as seen below:
 
   <div class="menu">
@@ -33,3 +40,62 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+const buildMenu = function (button , data) {
+  /// create elements ///
+  const menu = newElem ("div");
+  const list = newElem ("ul");
+  const items = repeat (data.length , () => (newElem ("li")));
+
+  /// get existing elements
+  const buttonIcon = button.querySelector ("i");
+
+  /// add structure ///
+  menu.append (list);
+  list.append (...items);
+
+  /// add classes ///
+  menu.upClass ("menu");
+  { // replace button icon class in case it's missing or wrong
+    const oldClass = Array.from (buttonIcon.classList).join (" ");
+    buttonIcon.swapClass (oldClass , Icons["show-menu"]);
+  }
+
+  /// add content ///
+  items.forEach (
+    (el , i) => {
+      el.innerHTML = data[i];
+    }
+  );
+
+  /// add events ///
+  const toggleMenu = function (ev) {
+    menu.toggleClass ("open");
+    
+    /// change button icon on state ///
+    if (menu.hasClass ("open")) {
+      buttonIcon.swapClass (Icons["show-menu"] , Icons["hide-menu"]);
+    } else {
+      buttonIcon.swapClass (Icons["hide-menu"] , Icons["show-menu"]);
+    }
+  };
+  button.addEventListener ("click" , toggleMenu);
+
+  // exit
+  return (menu);
+};
+
+/***********************************************************
+  BUILD
+***********************************************************/
+
+const menuContainer = document.querySelector ("div.header");
+// -- WTH
+// We aren't using <header>?
+// We're doing <div class="header">.
+// Way to be semantic...
+const menuButton = menuContainer.querySelector (".button.menu-button");
+
+const menu = buildMenu (menuButton , menuItems);
+
+menuContainer.append (menu);
